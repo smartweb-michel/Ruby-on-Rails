@@ -1,0 +1,55 @@
+sl:
+  errors:
+    messages:
+      expired: ~
+      not_found: ~
+      already_confirmed: ~
+      not_locked: ~
+  devise:
+    failure:
+      already_authenticated: ~
+      unauthenticated: "Preden nadaljuješ, se moraš prijaviti ali registrirati."
+      unconfirmed: ~
+      locked: ~
+      invalid: "Napašen e-naslov ali geslo."
+      invalid_token: ~
+      timeout: "Tvoja seja je potekla. Prosim, ponovno se prijavi, da lahko nadaljuješ."
+      inactive: ~
+    passwords:
+      updated_not_active: ~
+      send_paranoid_instructions: ~
+      send_instructions: ~
+      updated: ~
+    sessions:
+      signed_in: ~
+      signed_out: ~
+    confirmations:
+      send_paranoid_instructions: ~
+      send_instructions: ~
+      confirmed: ~
+    registrations:
+      signed_up_but_unconfirmed: "Email z linkom za potrditev je bil poslan na tvoj e-naslov. Prosim, odpri link in aktiviraj račun."
+      signed_up_but_inactive: ~
+      signed_up_but_locked: ~
+      reasons:
+        inactive: ~
+        unconfirmed: ~
+        locked: ~
+      update_needs_confirmation: "Uspešno si posodibil svoj račun. Zdaj je potrebna še potrditev novega e-naslova. Prosim, preveri e-pošto in klikni na povezavo, da dokončaš potrditev novega e-naslova."
+      signed_up: ~
+      updated: ~
+      destroyed: ~
+    unlocks:
+      send_paranoid_instructions: ~
+      send_instructions: ~
+      unlocked: ~
+    omniauth_callbacks:
+      success: ~
+      failure: ~
+    mailer:
+      confirmation_instructions:
+        subject: "Navodila za potrditev uporabniškega računa"
+      reset_password_instructions:
+        subject: "Navodila za ponastavitev gesla"
+      unlock_instructions:
+        subject: ~

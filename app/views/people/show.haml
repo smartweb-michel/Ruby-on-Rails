@@ -1,0 +1,76 @@
+- content_for :javascript do
+  initialize_profile_view("#{@person.username}");
+
+- content_for :title_header do
+  %h1
+    %span.profile-title= @person.name(@current_community) + (@community_customization && @community_customization.storefront_label ? @community_customization.storefront_label : "")
+
+.row
+  .col-8
+
+    .row.relative
+      .people-image-mobile
+        = huge_avatar_thumb(@person)
+      .profile-action-buttons-mobile
+        = render :partial => "profile_action_buttons"
+
+    .row
+      - if @person.description && !@person.description.blank?
+        - text_with_line_breaks do
+          = @person.description
+      - elsif current_user?(@person)
+        %a{href: person_settings_path(@person)}
+          .icon-with-text-container
+            .ss-chat.icon-part
+            .ss.text-part= t(".add_description")
+
+    .row
+      %h2.people-header
+        - if listings.total_entries > 0
+          - if current_user?(@person) && params[:show_closed]
+            = pluralize(listings.total_entries, t(".listing"), t(".listings"))
+          - else
+            = pluralize(listings.total_entries, t(".open_listing"), t(".open_listings"))
+        - else
+          - if current_user?(@person) && params[:show_closed]
+            = t(".no_listings")
+          - else
+            = t(".no_open_listings")
+        %span.people-show-closed-link
+          - if current_user?(@person)
+            - if params[:show_closed]
+              = link_to t("people.profile_listings.show_only_open"), person_path(@person)
+            - else
+              = link_to t("people.profile_listings.show_also_closed"), person_path(@person, :show_closed => true)
+
+    #profile-listings-list
+      - limit = 6
+      = render :partial => 'listings/profile_listings', :locals => {person: @person, limit: limit, listings: listings}
+
+    - if @current_community.follow_in_use?
+      = render :partial => "followed_people", :locals => { person: @person, followed_people: followed_people, limit: 6 }
+
+    #people-testimonials.listing-main
+      .row
+        %h2.people-header
+          - if received_testimonials.size > 0
+            = pluralize(received_testimonials.size, t(".review"), t(".reviews"))
+            = "(#{feedback_positive_percentage.to_s}% #{t("people.show.positive")}, #{received_positive_testimonials.size}/#{received_testimonials.size})"
+          - else
+            = t(".no_reviews")
+        - if received_testimonials.size > 0
+          #profile-testimonials-list
+            = render :partial => "testimonials", :locals => {:received_testimonials => received_testimonials, :limit => 3}
+
+  .col-4
+    .row
+      .people-image
+        = huge_avatar_thumb(@person)
+
+    .row
+      .profile-action-buttons-desktop
+        = render :partial => "profile_action_buttons"
+
+- content_for :extra_javascript do
+  :javascript
+    window.ST.initializeFollowButtons();

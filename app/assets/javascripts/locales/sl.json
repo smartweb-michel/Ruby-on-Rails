@@ -1,0 +1,30 @@
+{
+  "please_wait": "Prosim, počakaj ...",
+  "validation_messages": {
+    "accept": "Slika mora bit v GIF, JPG ali PNG formatu.",
+    "creditcard": "Please enter a valid credit card number.",
+    "date": "Please enter a valid date.",
+    "dateISO": "Please enter a valid date (ISO).",
+    "digits": "Please enter only digits.",
+    "email": "Prosim, vnesi veljaven e-naslov.",
+    "equalTo": "Please enter the same value again.",
+    "max": "Prosim, vnesi vrednost manjšo ali enako od {0}.",
+    "maxlength": "Please enter no more than {0} characters.",
+    "min": "Prosim, vnesi vrednost večjo ali enako od {0}.",
+    "minlength": "Please enter at least {0} characters.",
+    "number": "Please enter a valid number.",
+    "range": "Please enter a value between {0} and {1}.",
+    "rangelength": "Please enter a value between {0} and {1} characters long.",
+    "remote": "Please fix this field.",
+    "required": "This field is required.",
+    "url": "Please enter a valid URL.",
+    "address_validator": "The location was not found.",
+    "money": "Vnesti moraš veljavno ceno.",
+    "night_selected": null,
+    "availability_range": null,
+    "min_bound": "Prosim, vnesi vrednost manjšo od ({0})",
+    "max_bound": "Prosim, vnesi vrednost večjo od ({0})",
+    "number_no_decimals": "Please enter a whole number",
+    "number_decimals": "Please enter a valid number with either dot (.) or comma (,) as a decimal separator"
+  }
+}

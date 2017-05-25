@@ -1,0 +1,8 @@
+# we don't want these to be community updated (wording & layout)
+fi:
+  expiration:
+    title: "Sharetribe-palvelun kokeilujakso on päättynyt."
+    contact_us: "Ota yhteyttä."
+    sub_title_new: "Ei huolta, markkinapaikan tietoja ei ole poistettu. Voit jatkaa markkinapaikkasi käyttöä välittömästi tilaamalla jonkin maksullisista paketeistamme."
+    need_more_info: "Tarvitsetko enemmän tietoa?"
+    link_to_external_service: "Valitse paketti"

@@ -1,0 +1,8 @@
+# we don't want these to be community updated (wording & layout)
+fr:
+  expiration:
+    title: "Votre place de marché d'essai a expiré."
+    contact_us: "Contactez-nous."
+    sub_title_new: "Ne vous inquiétez pas, aucune donnée n'a été supprimée. Vous pouvez réactiver votre place de marché immédiatement en souscrivant à l'une de nos offres."
+    need_more_info: "Besoin de plus d'informations ?"
+    link_to_external_service: "Choisir une offre"

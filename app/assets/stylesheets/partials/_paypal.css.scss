@@ -1,0 +1,17 @@
+@import "mixins/all";
+
+.paypal-button-wrapper {
+
+  .checkout-with-paypal-button {
+    float: left;
+    outline: 0;
+  }
+  & .paypal-button-loading-img {
+    float: left;
+    width: em(30);
+    height: em(30);
+    margin-top: em(18);
+    margin-left: lines(0.75);
+  }
+}
+
